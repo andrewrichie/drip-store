@@ -1,13 +1,12 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Heart } from 'lucide-react'
 import { useWishlist } from '../context/WishlistContext'
-import { useCart } from '../context/CartContext'
 import ProductCard from '../components/ProductCard'
 
 const Wishlist = () => {
-  const { wishlist, removeFromWishlist } = useWishlist()
-  const { addToCart } = useCart()
+  const { wishlist } = useWishlist()
+ 
 
   if (wishlist.length === 0) {
     return (
@@ -59,13 +58,11 @@ const Wishlist = () => {
         </motion.div>
 
         {/* Wishlist Grid */}
-        <AnimatePresence>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12">
-            {wishlist.map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </AnimatePresence>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12">
+        {wishlist.map(product => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
 
       </div>
     </main>
