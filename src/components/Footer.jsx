@@ -104,7 +104,7 @@ const Footer = () => {
       <div className="border-t border-drip-white/10">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-inter text-xs text-drip-white/20 tracking-wide">
-            © {new Date().getFullYear()} DRIP. All rights reserved.
+            © {new Date().getFullYear()} AFUYE ANDREW. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {['Privacy Policy', 'Terms of Service', 'Returns'].map(item => (
